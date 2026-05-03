@@ -1,32 +1,15 @@
-# QA Analyst Assessment
-
-This repository contains solutions for the take-home assessment, divided into two parts:
-
-- Part 1: Functional Programming
-- Part 2: API Testing
-
----
-
-##  Project Structure
-
-qa-analyst-assessment/
-
-├── part1-functional/  
-│   ├── RemoveDuplicates.cs  
-│   └── README.md  
-│  
-└── part2-api-testing/  
-    ├── ApiTests.cs  
-    └── README.md  
-
----
-
 # Part 1: Functional Programming
 
-##  Problem
-Write a pure function to remove duplicates from a list while preserving the order of first occurrences.
+##  Overview
+This part focuses on writing a function to remove duplicates from a list while keeping the original order.  
+The solution is implemented in C# and follows a pure function approach.
 
-Example:
+---
+
+##  Problem
+Given a list of numbers, return a new list with duplicates removed while preserving the order of first occurrences.
+
+Example:  
 Input:  [1, 2, 3, 2, 4, 1, 5]  
 Output: [1, 2, 3, 4, 5]
 
@@ -34,12 +17,10 @@ Output: [1, 2, 3, 4, 5]
 
 ##  Approach
 
-I have implemented two approaches:
-
 ### 1. Brute Force Approach
-- Used nested loops to check if an element already exists in the result list
-- For each element, compared it with previously added elements
-- If not found, added to result
+- Used nested loops to check if an element already exists in the result list  
+- For each item, compared it with elements already added  
+- If not found, added it to the result  
 
 **Time Complexity:** O(n²)  
 **Space Complexity:** O(n)
@@ -47,21 +28,20 @@ I have implemented two approaches:
 ---
 
 ### 2. Optimal Approach (Using HashSet)
-- Used a HashSet to track already seen elements
-- Since HashSet lookup is O(1), duplicate checking is efficient
-- Maintained order using a separate result list
+- Used a HashSet to keep track of elements already seen  
+- Since lookup in HashSet is fast, it avoids repeated comparisons  
+- Maintained order using a separate result list  
 
 **Time Complexity:** O(n)  
 **Space Complexity:** O(n)
 
 ---
 
-## ⚙️ Functional Programming Principles Followed
-
-- Pure function (same input → same output)
-- No modification of original input
-- Returned a new list
-- Used clean and readable logic
+##  Key Points
+- The function does not modify the original input  
+- A new list is returned (pure function)  
+- Order of elements is preserved  
+- Duplicate values are removed correctly  
 
 ---
 
