@@ -1,4 +1,4 @@
-/* This solution contains the Implementation of the Remove DUplicates problem
+/* This solution contains the Implementation of the Remove Duplicates problem
   using the Brute Force approach and the Optimized approach.*/
 
 // 1. Brute Force Approach:
